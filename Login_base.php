@@ -9,7 +9,7 @@ $pass= $_POST["pass"];
 $collection = (new MongoDB\Client)->PSICOLOGIA->usuarios;
 
 $insertOneResult = $collection->insertOne([
-    'Usuario' => $usuario,
+    'email' => $usuario,
     'password' => $pass,
     
 ]);

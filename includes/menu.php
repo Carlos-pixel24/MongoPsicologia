@@ -27,6 +27,7 @@
                     <a href="" class="list-group-item list-group-item-action bg-light">Inicio <i class="fa fa-home float-right fa-lg"></i></a>
                     <a href="" class="list-group-item list-group-item-action bg-light">Alumnos <i class="fa fa-user float-right fa-lg"></i></a>
                     <a href="" class="list-group-item list-group-item-action bg-light">Citas <i class="fa fa-edit float-right fa-lg"></i></a>
+                    <a href="expedientes.php" class="list-group-item list-group-item-action bg-light">Registro <i class="fa fa-edit float-right fa-lg"></i></a>
                </div>
           </div>
           <!-- /#sidebar-wrapper -->
