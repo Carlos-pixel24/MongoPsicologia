@@ -27,7 +27,7 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="assets/img/logo.png" alt="IMG">
 				</div>
-				<form class="login100-form validate-form" action="Login_base.php" method="POST">
+				<form class="login100-form validate-form" action="connection.php" method="POST">
 					<span class="login100-form-title">
 						Iniciar sesion
 					</span>
@@ -46,16 +46,21 @@
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
+						<?php
+       if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
+       {
+          echo "<div style='color:red'>Usuario y/o contraseña invalido </div>";
+       }
+     ?>
 					</div>
 
 					<div class="container-login100-form-btn">
 						<a class="login100-form-btn" >
+						<button type="submit">Entrar </button>
 						
-						
-							Entrar
 						</a>
 
-						<button type="submit">entrar </button>
+						
 
 					</div>
 
