@@ -1,3 +1,16 @@
+<?php include "includes/menu.php" ?>
+
+
+<!------------------------------------------------------------------------------>
+<br>
+<form method="post" action="buscar_expedientes.php" style="padding-right: 600px">
+    <label>Buscar tabla por matricula</label>
+    <input type="text" name="buscar" id="buscar">
+    <input type="submit" value="Buscar">
+</form>
+<br>
+<!------------------------------------------------------------------------------>
+<button onclick="exportTableToExcel('tblData')">Exportar todo a Excel</button>
 <p>
     <?php
     require_once("conexion.php");
@@ -10,14 +23,14 @@
         <?php
         foreach ($datos as $dato) {
 ?>      <tr>
-            <td><p><label>Matricula</label></p></td>
-            <td><p><label>Nombre</label></p></td>
-            <td><p><label>Carrera</label></p></td>
-            <td><p><label>Sexo</label></p></td>
-            <td><p><label>Edad</label></p></td>
-            <td><p><label>Estado Civil</label></p></td>
-            <td><p><label>Telefono</label></p></td>
-            <td><p><label>Email</label></p></td>
+            <td style="font-weight:bold"><p><label>Matricula</label></p></td>
+            <td style="font-weight:bold"><p><label>Nombre</label></p></td>
+            <td style="font-weight:bold"><p><label>Carrera</label></p></td>
+            <td style="font-weight:bold"><p><label>Sexo</label></p></td>
+            <td style="font-weight:bold"><p><label>Edad</label></p></td>
+            <td style="font-weight:bold"><p><label>Estado Civil</label></p></td>
+            <td style="font-weight:bold"><p><label>Telefono</label></p></td>
+            <td style="font-weight:bold"><p><label>Email</label></p></td>
         </tr>
         <tr>
             <td><p><?php echo $dato["Matricula"]; ?></p></td>
@@ -29,10 +42,16 @@
             <td><p><?php echo $dato["Telefono"]; ?></p></td>
             <td><p><?php echo $dato["Email"]; ?></p></td>
         </tr>
+        <tr>
+            <td colspan="8"><br></td>
+        </tr>
+        
+
                 <?php
         }//foreach
                 ?>
                 </table>
+
                 <?php
     }else{
                 ?>
@@ -41,62 +60,6 @@
     } ?>
 
 </p>
-
-<button onclick="exportTableToExcel('tblData')">Exportar todo a Excel</button>
-
-<br><br>
-
-<!------------------------------------------------------------------------------>
-<label>Buscar tabla por matricula</label>
-<input type="text" name="buscar" id="buscar">
-
-<input type="button" value="Buscar..."/>
-
-<?php
-
-if ($users->count()>0)
-    {
-        $datos = $users->find();
-        ?>
-        <table border=1 id="tblData">
-        <?php
-        foreach ($datos as $dato) {
-?>      <tr>
-            <td><p><label>Matricula</label></p></td>
-            <td><p><label>Nombre</label></p></td>
-            <td><p><label>Carrera</label></p></td>
-            <td><p><label>Sexo</label></p></td>
-            <td><p><label>Edad</label></p></td>
-            <td><p><label>Estado Civil</label></p></td>
-            <td><p><label>Telefono</label></p></td>
-            <td><p><label>Email</label></p></td>
-            <td><button onclick="exportTableToExcel('tblData')">Exportar este registro</button></td>
-        </tr>
-        <tr>
-            <td><p><?php echo $dato["Matricula"]; ?></p></td>
-            <td><p><?php echo $dato["Nombre"]; ?></p></td>
-            <td><p><?php echo $dato["Carrera"]; ?></p></td>
-            <td><p><?php echo $dato["Sexo"]; ?></p></td>
-            <td><p><?php echo $dato["Edad"]; ?></p></td>
-            <td><p><?php echo $dato["Estado Civil"]; ?></p></td>
-            <td><p><?php echo $dato["Telefono"]; ?></p></td>
-            <td><p><?php echo $dato["Email"]; ?></p></td>
-        </tr>
-
-                <?php
-        }//foreach
-                ?>
-                </table>
-                <?php
-    }else{
-                ?>
-                        <h4></i>Sin registros en la Base de Datos</h4>
-                <?php 
-    } ?>
-<!------------------------------------------------------------------------------>
-
-
-
 
 <script type="text/javascript">
     //Funcion para exportar la tabla a Excell
@@ -133,3 +96,4 @@ function exportTableToExcel(tableID, filename = ''){
 }
 </script>
 
+<?php include 'includes/footer.php' ?>
