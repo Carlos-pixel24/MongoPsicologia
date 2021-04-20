@@ -24,9 +24,9 @@
           <div class="bg-light border-right" id="sidebar-wrapper">
                <div class="sidebar-heading"><img src="assets/img/logo.png" height="150px" width="180px" alt=""> </div>
                <div class="list-group list-group-flush">
-                    <a href="" class="list-group-item list-group-item-action bg-light">Inicio <i class="fa fa-home float-right fa-lg"></i></a>
-                    <a href="" class="list-group-item list-group-item-action bg-light">Alumnos <i class="fa fa-user float-right fa-lg"></i></a>
-                    <a href="" class="list-group-item list-group-item-action bg-light">Citas <i class="fa fa-edit float-right fa-lg"></i></a>
+                    <a href="registro.php" class="list-group-item list-group-item-action bg-light">Inicio <i class="fa fa-home float-right fa-lg"></i></a>
+                    <a href="registro.php" class="list-group-item list-group-item-action bg-light">Citas <i class="fa fa-user float-right fa-lg"></i></a>
+                   
                     <a href="expedientes.php" class="list-group-item list-group-item-action bg-light">Registro <i class="fa fa-edit float-right fa-lg"></i></a>
                </div>
           </div>
@@ -48,7 +48,7 @@
                                         Username
                                    </a>
                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="">Cerrar sesion</a>
+                                        <a class="dropdown-item" href="Login.php">Cerrar sesion</a>
                                    </div>
                               </li>
                          </ul>
