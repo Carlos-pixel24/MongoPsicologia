@@ -4,13 +4,32 @@
 <!------------------------------------------------------------------------------>
 <br>
 <form method="post" action="buscar_expedientes.php" style="padding-right: 600px">
+    
+    
+    <div class="d-flex justify-content-between">
     <label>Buscar tabla por matricula</label>
-    <input type="text" name="buscar" id="buscar">
-    <input type="submit" value="Buscar">
+    <input class="input100 m-1" type="text" name="buscar" id="buscar">
+
+
+    <div class="container-login100-form-btn">
+		<a class="login100-form-btn" >
+		    <button type="submit">Buscar </button>
+		</a>
+
+    </div>
+    </div>
+
 </form>
 <br>
 <!------------------------------------------------------------------------------>
-<button onclick="exportTableToExcel('tblData')">Exportar todo a Excel</button>
+
+<div class="container-login100-form-btn">
+<div class="d-flex justify-content-center m-">
+		<a class="login100-form-btn" >
+            <button onclick="exportTableToExcel('tblData')">Exportar todo a Excel</button>
+		</a>
+</div>
+</div>
 <p>
     <?php
     require_once("conexion.php");
@@ -19,10 +38,9 @@
     {
         $datos = $users->find();
         ?>
-        <table border=1 id="tblData">
-        <?php
-        foreach ($datos as $dato) {
-?>      <tr>
+        
+        <table  class="table" border=1 id="tblData">
+         <tr>
             <td style="font-weight:bold"><p><label>Matricula</label></p></td>
             <td style="font-weight:bold"><p><label>Nombre</label></p></td>
             <td style="font-weight:bold"><p><label>Carrera</label></p></td>
@@ -32,6 +50,10 @@
             <td style="font-weight:bold"><p><label>Telefono</label></p></td>
             <td style="font-weight:bold"><p><label>Email</label></p></td>
         </tr>
+        <?php
+        foreach ($datos as $dato) {
+?>     
+        
         <tr>
             <td><p><?php echo $dato["Matricula"]; ?></p></td>
             <td><p><?php echo $dato["Nombre"]; ?></p></td>
