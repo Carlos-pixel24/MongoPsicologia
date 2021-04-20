@@ -2,7 +2,7 @@
 
 <br>
 <h1>
-     Alumno nuevo
+     Cita Alumno
 </h1>
 <br>
 <div class="container">
