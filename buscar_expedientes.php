@@ -15,22 +15,28 @@ foreach ($dato as $dato) {
 <tr>
     <td style="font-weight:bold"><p><label>Matricula</label></p></td>
     <td style="font-weight:bold"><p><label>Nombre</label></p></td>
+    <td style="font-weight:bold"><p><label>Apellido</label></p></td>
     <td style="font-weight:bold"><p><label>Carrera</label></p></td>
     <td style="font-weight:bold"><p><label>Sexo</label></p></td>
     <td style="font-weight:bold"><p><label>Edad</label></p></td>
     <td style="font-weight:bold"><p><label>Estado Civil</label></p></td>
     <td style="font-weight:bold"><p><label>Telefono</label></p></td>
     <td style="font-weight:bold"><p><label>Email</label></p></td>
+    <td style="font-weight:bold"><p><label>Fecha</label></p></td>
+    <td style="font-weight:bold"><p><label>Hora</label></p></td>
 </tr>
 <tr>
     <td><p><?php echo $dato["Matricula"]; ?></p></td>
     <td><p><?php echo $dato["Nombre"]; ?></p></td>
+    <td><p><?php echo $dato["Apellido"]; ?></p></td>
     <td><p><?php echo $dato["Carrera"]; ?></p></td>
     <td><p><?php echo $dato["Sexo"]; ?></p></td>
     <td><p><?php echo $dato["Edad"]; ?></p></td>
     <td><p><?php echo $dato["Estado Civil"]; ?></p></td>
     <td><p><?php echo $dato["Telefono"]; ?></p></td>
     <td><p><?php echo $dato["Email"]; ?></p></td>
+    <td><p><?php echo $dato["Fecha"]; ?></p></td>
+    <td><p><?php echo $dato["Time"]; ?></p></td>
 </tr>
 </table>
 <?php
