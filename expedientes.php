@@ -49,6 +49,8 @@
             <td style="font-weight:bold"><p><label>Estado Civil</label></p></td>
             <td style="font-weight:bold"><p><label>Telefono</label></p></td>
             <td style="font-weight:bold"><p><label>Email</label></p></td>
+            <td style="font-weight:bold"><p><label>Fecha</label></p></td>
+            <td style="font-weight:bold"><p><label>Hora</label></p></td>
         </tr>
         <?php
         foreach ($datos as $dato) {
@@ -63,6 +65,8 @@
             <td><p><?php echo $dato["Estado Civil"]; ?></p></td>
             <td><p><?php echo $dato["Telefono"]; ?></p></td>
             <td><p><?php echo $dato["Email"]; ?></p></td>
+            <td><p><?php echo $dato["Fecha"]; ?></p></td>
+            <td><p><?php echo $dato["Time"]; ?></p></td>
         </tr>
         <tr>
             <td colspan="8"><br></td>
