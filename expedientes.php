@@ -7,7 +7,7 @@
     
     
     <div class="d-flex justify-content-between">
-    <label>Buscar tabla por matricula</label>
+    <label>Buscar tabla por Alumno</label>
     <input class="input100 m-1" type="text" name="buscar" id="buscar">
 
 
