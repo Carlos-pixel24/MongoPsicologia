@@ -25,7 +25,7 @@ $mail = new PHPMailer(true);
 
 try {
     $fromemail = 'modelodepsicologia@gmail.com';
-    $fromname = 'Psicología UTN';
+    $fromname = 'Psicologia UTN';
     //Server settings
     $mail->SMTPDebug = 0;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
